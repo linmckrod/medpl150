@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dark Pink Gradient</title>
+  <title>Video Background Center</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-
-      /* Dark pink to black gradient */
       background: linear-gradient(135deg, #4b002e, #000000);
-
-      /* Deep yellow text */
       color: #e6c200;
       font-family: Arial, Helvetica, sans-serif;
 
@@ -28,18 +24,19 @@
       gap: 20px;
     }
 
-    img {
-      width: 250px;
-      max-width: 80%;
+    video {
+      width: 320px;
+      max-width: 85%;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(230, 194, 0, 0.3);
+      box-shadow: 0 0 25px rgba(230, 194, 0, 0.35);
     }
 
     a {
       color: #e6c200;
       text-decoration: none;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      font-weight: bold;
     }
 
     a:hover {
@@ -51,8 +48,14 @@
 <body>
 
   <div class="container">
-    <img src="https://via.placeholder.com/300x200" alt="Center Image">
-    <a href="#">Click Here</a>
+    <!-- Auto-playing video -->
+    <video autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Clickable text -->
+    <a href="#">ENTER</a>
   </div>
 
 </body>
