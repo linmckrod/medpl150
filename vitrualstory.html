@@ -49,10 +49,13 @@
 <body>
 
   <div class="container">
+    <!-- Video -->
     <video id="introVideo" loop playsinline>
-      <source src="your-video.mp4" type="video/mp4">
+      <source src="entrance.MOV" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
 
+    <!-- Clickable ENTER -->
     <a onclick="enterSite()">ENTER</a>
   </div>
 
@@ -62,7 +65,7 @@
       video.muted = false;
       video.play();
 
-      // go to next page
+      // Go to next page
       setTimeout(() => {
         window.location.href = "nextpage.html";
       }, 800);
