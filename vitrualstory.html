@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Background Center</title>
+  <title>Enter</title>
   <style>
     body {
       margin: 0;
@@ -32,11 +32,12 @@
     }
 
     a {
+      cursor: pointer;
       color: #e6c200;
-      text-decoration: none;
       font-size: 1.4rem;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       font-weight: bold;
+      text-decoration: none;
     }
 
     a:hover {
@@ -48,15 +49,25 @@
 <body>
 
   <div class="container">
-    <!-- Auto-playing video -->
-    <video autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+    <video id="introVideo" loop playsinline>
+      <source src="your-video.mp4" type="video/mp4">
     </video>
 
-    <!-- Clickable text -->
-    <a href="#">ENTER</a>
+    <a onclick="enterSite()">ENTER</a>
   </div>
+
+  <script>
+    function enterSite() {
+      const video = document.getElementById("introVideo");
+      video.muted = false;
+      video.play();
+
+      // go to next page
+      setTimeout(() => {
+        window.location.href = "nextpage.html";
+      }, 800);
+    }
+  </script>
 
 </body>
 </html>
