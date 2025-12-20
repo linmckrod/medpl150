@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Enter</title>
+
+  <!-- Royal-themed font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -12,7 +16,7 @@
       background: linear-gradient(135deg, #2a003d, #000000);
 
       color: #e6c200;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Cinzel', serif; /* royal-themed font */
 
       display: flex;
       align-items: center;
@@ -35,19 +39,32 @@
       box-shadow: 0 0 25px rgba(230, 194, 0, 0.35);
     }
 
-    /* ENTER link styling */
+    /* ENTER link styling with shadow */
     a {
       cursor: pointer;
       color: #e6c200;
-      font-size: 1.4rem;
+      font-size: 2rem;
       letter-spacing: 4px;
-      font-weight: bold;
+      font-weight: 700;
       text-decoration: none;
+
+      /* Shadow for royal glow effect */
+      text-shadow:
+        0 0 5px #e6c200,
+        0 0 10px #e6c200,
+        0 0 15px #e6c200,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33;
     }
 
     a:hover {
       color: #ffdd33;
-      text-decoration: underline;
+      text-shadow:
+        0 0 10px #ffdd33,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33,
+        0 0 40px #ffd700,
+        0 0 50px #ffd700;
     }
   </style>
 </head>
