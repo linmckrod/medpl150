@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Broken Bridge</title>
+
+  <!-- Royal-themed font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #4b002e, #000000); /* dark pink → black */
+      color: #e6c200;
+      font-family: 'Cinzel', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Image styling */
+    img {
+      width: 800px;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 35px rgba(230, 194, 0, 0.45);
+      margin-bottom: 30px;
+    }
+
+    /* Poem styling */
+    .poem {
+      font-size: 2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      text-shadow: 0 0 5px #e6c200; /* minimal shadow */
+    }
+
+    /* Option link styling */
+    .option {
+      display: block;
+      width: max-content;
+      margin: 10px auto;
+      opacity: 0;
+      transform: scale(0.8);
+      cursor: pointer;
+      color: #e6c200;
+      font-size: 2rem;
+      letter-spacing: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      text-shadow:
+        0 0 5px #e6c200,
+        0 0 10px #e6c200,
+        0 0 15px #e6c200,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .option:hover {
+      color: #ffdd33;
+      text-shadow:
+        0 0 10px #ffdd33,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33,
+        0 0 40px #ffd700,
+        0 0 50px #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Image -->
+    <img src="bridge.jpg" alt="Broken Bridge Image">
+
+    <!-- Poem under the image -->
+    <div class="poem">
+      The bridge ahead could break and fall,<br>
+      Do you follow the lights and risk it all,<br>
+      Or dive into the river’s chill,<br>
+      And let the current test your will?
+    </div>
+
+    <!-- Options -->
+    <a class="option" href="journeysend3.html">SWIM ACROSS</a>
+    <a class="option" href="journeycontinues3.html">WALK ACROSS</a>
+  </div>
+
+  <script>
+    // Animate options after 3 seconds
+    setTimeout(() => {
+      const options = document.querySelectorAll('.option');
+      options.forEach((option, index) => {
+        setTimeout(() => {
+          option.style.opacity = 1;
+          option.style.transform = 'scale(1)';
+        }, index * 200); // stagger animation by 0.2s
+      });
+    }, 3000);
+  </script>
+
+</body>
+</html>
