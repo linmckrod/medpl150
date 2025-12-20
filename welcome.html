@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+
+  <!-- Royal-themed font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+
+      /* Dark purple to black gradient */
+      background: linear-gradient(135deg, #1a0026, #000000);
+
+      color: #e6c200;
+      font-family: 'Cinzel', serif; /* royal-themed font */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Poem text styling */
+    .poem {
+      font-size: 2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      text-shadow:
+        0 0 5px #e6c200,
+        0 0 10px #e6c200,
+        0 0 15px #e6c200,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33;
+    }
+
+    /* Planet image styling - same size as previous image */
+    img {
+      width: 800px; /* same as entrance image */
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 35px rgba(230, 194, 0, 0.45);
+      margin-bottom: 40px;
+    }
+
+    /* ACCEPT QUEST link styling */
+    .accept-quest {
+      display: none; /* will appear after poem and image */
+      cursor: pointer;
+      color: #e6c200;
+      font-size: 2rem;
+      letter-spacing: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      text-shadow:
+        0 0 5px #e6c200,
+        0 0 10px #e6c200,
+        0 0 15px #e6c200,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33;
+      transition: all 0.3s ease;
+    }
+
+    .accept-quest:hover {
+      color: #ffdd33;
+      text-shadow:
+        0 0 10px #ffdd33,
+        0 0 20px #ffdd33,
+        0 0 30px #ffdd33,
+        0 0 40px #ffd700,
+        0 0 50px #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Poem -->
+    <div class="poem">
+      The sun has vanished from the sky,<br>
+      Darkness spreads where light should lie.<br>
+      Brave the shadows, face the fight,<br>
+      Restore the sun and bring back light.
+    </div>
+
+    <!-- Centered Planet Image -->
+    <img src="planet.jpg" alt="Planet Image">
+
+    <!-- ACCEPT QUEST link -->
+    <a class="accept-quest" href="light.html">ACCEPT QUEST</a>
+  </div>
+
+  <script>
+    // Make ACCEPT QUEST appear after 3 seconds
+    setTimeout(() => {
+      document.querySelector('.accept-quest').style.display = 'inline-block';
+    }, 3000); // 3000ms = 3 seconds
+  </script>
+
+</body>
+</html>
