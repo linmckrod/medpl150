@@ -4,19 +4,16 @@
   <meta charset="UTF-8">
   <title>Welcome</title>
 
-  <!-- Royal-themed font from Google Fonts -->
+  <!-- Royal-themed font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       height: 100vh;
-
-      /* Dark pink to black gradient */
-      background: linear-gradient(135deg, #4b002e, #000000);
-
+      background: linear-gradient(135deg, #4b002e, #000000); /* dark pink → black */
       color: #e6c200;
-      font-family: 'Cinzel', serif; /* royal-themed font */
+      font-family: 'Cinzel', serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,17 +22,11 @@
       padding: 20px;
     }
 
-    /* Poem text styling */
-    .poem {
-      font-size: 2rem;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      text-shadow:
-        0 0 5px #e6c200,
-        0 0 10px #e6c200,
-        0 0 15px #e6c200,
-        0 0 20px #ffdd33,
-        0 0 30px #ffdd33;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* horizontally centers everything */
+      justify-content: center;
     }
 
     /* Planet image styling */
@@ -44,14 +35,24 @@
       max-width: 90%;
       border-radius: 12px;
       box-shadow: 0 0 35px rgba(230, 194, 0, 0.45);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    /* ACCEPT QUEST link styling */
+    /* Poem styling - under the image, simpler shadow */
+    .poem {
+      font-size: 2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      text-shadow: 0 0 5px #e6c200; /* minimal shadow for readability */
+    }
+
+    /* ACCEPT QUEST styling */
     .accept-quest {
-      display: inline-block;
-      opacity: 0; /* start invisible */
-      transform: scale(0.8); /* start slightly smaller */
+      display: block;
+      width: max-content;
+      margin: 0 auto; /* centered */
+      opacity: 0; /* hidden initially */
+      transform: scale(0.8); /* slightly smaller for animation */
       cursor: pointer;
       color: #e6c200;
       font-size: 2rem;
@@ -64,8 +65,6 @@
         0 0 15px #e6c200,
         0 0 20px #ffdd33,
         0 0 30px #ffdd33;
-
-      /* Animate transition */
       transition: opacity 1s ease, transform 1s ease;
     }
 
@@ -83,7 +82,10 @@
 <body>
 
   <div class="container">
-    <!-- Poem -->
+    <!-- Planet Image -->
+    <img src="planet.jpg" alt="Planet Image">
+
+    <!-- Poem under the image -->
     <div class="poem">
       The sun has vanished from the sky,<br>
       Darkness spreads where light should lie.<br>
@@ -91,10 +93,7 @@
       Restore the sun and bring back light.
     </div>
 
-    <!-- Planet image -->
-    <img src="planet.jpg" alt="Planet Image">
-
-    <!-- ACCEPT QUEST link -->
+    <!-- ACCEPT QUEST -->
     <a class="accept-quest" href="light.html">ACCEPT QUEST</a>
   </div>
 
@@ -104,7 +103,7 @@
       const link = document.querySelector('.accept-quest');
       link.style.opacity = 1;
       link.style.transform = 'scale(1)';
-    }, 3000); // 3 seconds delay
+    }, 3000);
   </script>
 
 </body>
