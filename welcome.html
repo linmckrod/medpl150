@@ -12,8 +12,8 @@
       margin: 0;
       height: 100vh;
 
-      /* Dark purple to black gradient */
-      background: linear-gradient(135deg, #1a0026, #000000);
+      /* Dark pink to black gradient */
+      background: linear-gradient(135deg, #4b002e, #000000);
 
       color: #e6c200;
       font-family: 'Cinzel', serif; /* royal-themed font */
@@ -38,18 +38,20 @@
         0 0 30px #ffdd33;
     }
 
-    /* Planet image styling - same size as previous image */
+    /* Planet image styling */
     img {
-      width: 800px; /* same as entrance image */
+      width: 800px;
       max-width: 90%;
       border-radius: 12px;
       box-shadow: 0 0 35px rgba(230, 194, 0, 0.45);
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     /* ACCEPT QUEST link styling */
     .accept-quest {
-      display: none; /* will appear after poem and image */
+      display: inline-block;
+      opacity: 0; /* start invisible */
+      transform: scale(0.8); /* start slightly smaller */
       cursor: pointer;
       color: #e6c200;
       font-size: 2rem;
@@ -62,7 +64,9 @@
         0 0 15px #e6c200,
         0 0 20px #ffdd33,
         0 0 30px #ffdd33;
-      transition: all 0.3s ease;
+
+      /* Animate transition */
+      transition: opacity 1s ease, transform 1s ease;
     }
 
     .accept-quest:hover {
@@ -87,7 +91,7 @@
       Restore the sun and bring back light.
     </div>
 
-    <!-- Centered Planet Image -->
+    <!-- Planet image -->
     <img src="planet.jpg" alt="Planet Image">
 
     <!-- ACCEPT QUEST link -->
@@ -95,10 +99,12 @@
   </div>
 
   <script>
-    // Make ACCEPT QUEST appear after 3 seconds
+    // Animate ACCEPT QUEST after 3 seconds
     setTimeout(() => {
-      document.querySelector('.accept-quest').style.display = 'inline-block';
-    }, 3000); // 3000ms = 3 seconds
+      const link = document.querySelector('.accept-quest');
+      link.style.opacity = 1;
+      link.style.transform = 'scale(1)';
+    }, 3000); // 3 seconds delay
   </script>
 
 </body>
